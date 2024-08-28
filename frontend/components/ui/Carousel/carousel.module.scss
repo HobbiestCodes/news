@@ -1,0 +1,46 @@
+.slider {
+  width: 100%;
+  cursor: grab;
+  //   background-color: white;
+  // padding: 1% 2%;
+
+  &.sliderWithArrows {
+    @media (min-width: 768px) {
+      // padding-top: 0.5rem;
+      // padding-bottom: 0.5rem;
+    }
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.prevArrow,
+.nextArrow {
+  position: absolute;
+  top: -0.625rem;
+  padding: 0.25rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: translateX(-0.25rem);
+  }
+}
+
+.nextArrow {
+  left: 2.5rem;
+
+  &:active {
+    transform: translateX(0.25rem);
+  }
+}
+
+.prevArrow {
+  left: 0.75rem;
+}
