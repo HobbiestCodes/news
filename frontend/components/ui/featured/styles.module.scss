@@ -9,14 +9,19 @@
     width: fit-content;
     font-size: 2.5rem;
     line-height: 100%;
+
+    
     &::before {
       content: "";
       position: absolute;
       top: 45%;
-      left: -10%;
+      left: -2%;
       width: 35%;
       height: 10%;
       background: #000;
+      @include media(mobile) {
+        width: 10%;
+      }
     }
   }
   .child {

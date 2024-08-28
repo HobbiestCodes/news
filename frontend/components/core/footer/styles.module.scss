@@ -6,17 +6,30 @@
   height: 20rem;
   @include flex();
   gap: 0.1rem;
-
+  @include media(mobile) {
+    flex-direction: column;
+    height: auto;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    // padding-left: 10%;
+  }
   .box {
     width: 50%;
     height: 20%;
     @include flex();
+    @include media(mobile) {
+      width: 100%;
+    }
     a {
         text-decoration: none;
         .logo {
             font-size: 4rem;
             font-weight: bold;
             color: $black;
+            @include media(mobile) {
+              font-size: 2.5rem;
+              text-align: center;
+            }
         }
     }
     &.social {
@@ -24,6 +37,10 @@
         @include flex();
         gap: 20px;
         list-style: none;
+        @include media(mobile) {
+          // @include flex(flex-start, flex-start, column);
+          gap: 15px;
+        }
         li {
             font-size: 1.2rem;
           cursor: pointer;
