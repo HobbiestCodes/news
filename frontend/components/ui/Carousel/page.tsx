@@ -69,8 +69,6 @@ const Carousel: React.FC<CarouselProps> = ({
         },
       },
     ],
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
   };
   return (
     <>
@@ -85,21 +83,3 @@ const Carousel: React.FC<CarouselProps> = ({
 };
 
 export default Carousel;
-
-const PrevArrow = (props: any) => {
-  const { onClick } = props;
-  return (
-    <div onClick={onClick} className={styles.prevArrow}>
-      <IoArrowBackSharp size={20} />
-    </div>
-  );
-};
-
-const NextArrow = (props: any) => {
-  const { onClick } = props;
-  return (
-    <div onClick={onClick} className={styles.nextArrow}>
-      <IoArrowForwardSharp size={20} />
-    </div>
-  );
-};

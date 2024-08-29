@@ -8,7 +8,6 @@ function Featured() {
     <div className={styles.container}>
       <h1 className={styles.title}>Featured News</h1>
       <div className={styles.child}>
-        {/* Carousel added - gd */}
         <Carousel autoplay={true}>
           <BlogCard />
           <BlogCard />
